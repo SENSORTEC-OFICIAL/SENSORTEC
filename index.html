@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-pt"><!--tipo de língua do site-->
+<head><!--contém informações sobre a página que não são exibidas diretamente no navegador-->
+    <meta charset="UTF-8"><!--permite a exibição correta de caracteres especiais-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--define o comportamneto da página a diferentes dispositivos, adaptando-se-->
+    <title>SENSORTEC</title><!--define o título da página que aparece na barra do navegador-->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"><!--indica ao html onde deve ir buscar algumas fontes css-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /><!--carrega fontes "Open Sans" do Google Fonts-->
+    <link rel="stylesheet" href="css/SENSORTEC.css"><!--indica onde é que o html deve ir buscar os estilos css-->
+</head>
+<body><!--marca o início do conteúdo principal da página, visível ao utilizador no navegador-->
+  <div class="tm-container"><!--adiciona ao container principal um espaçamento interno de 30 pixeis-->
+    <div class="tm-row"><!--distribui de forma uniforme, o espaço, entre o primeiro e último elemento, ficando ambos encostados nas laterais do container principal-->
+      <!-----------------Página principal do site--------------------------->
+      <div class="tm-left"><!--define a largura do menu do lado esquerdo-->
+        <div class="tm-left-inner"><!--fixa o menu ao lado esquerdo, define para que os retângulos ocupem o espaço disponível e que não ultrapassem-->
+          <div class="tm-site-header"><!--configura a aparência do retângulo do logótipo-->
+            <img src="img/logo.png" alt="Logótipo SENSORTEC" class="tm-site-logo"><!--logótipo que está no retângulo grande--><!--cria uma margem direita da 30 pixeis-->
+          </div><!--o tributo "alt" fornece o texto alternativo caso a imagem não carregue-->
+          <nav class="tm-site-nav"><!--"nav" navegação lateral-->
+            <ul class="tm-site-nav-ul"><!--permite que os itens passem para linhas seguintes, se necessário, e organiza horizontalmente com espaço uniforme-->
+              <li class="tm-page-nav-item"><!--adiciona uma margem superior de 20 pixeis-->
+                <a href="#inicio" class="tm-page-link active"><!--configura a aparência do retângulo-->
+                  <i class="fas fa-home tm-page-link-icon"></i><!--icon que aparece no quadrado ao lado do texto--><!--adiciona espaço e redefine o tamanho do icon-->
+                  <span>Início</span><!--retângulo que diz "início"-->
+                </a><!--o tributo "a" define a ação de clique e direciona o utilizador para uma secção específica dentro da página-->
+              </li>
+              <li class="tm-page-nav-item"><!--adiciona uma margem superior de 20 pixeis-->
+                <a href="#sobre" class="tm-page-link"><!--configura a aparência do retângulo-->
+                  <i class="fas fa-users tm-page-link-icon"></i><!--icon que aparece no quadrado ao lado do texto--><!--adiciona espaço e redefine o tamanho do icon-->
+                  <span>Sobre Nós</span><!---retângulo "sobre nós"-->
+                </a>
+              </li>
+              <li class="tm-page-nav-item"><!--adiciona uma margem superior de 20 pixeis-->
+                <a href="#especial" class="tm-page-link"><!--configura a aparência do retângulo-->
+                  <i class="fas fa-map tm-page-link-icon"></i><!--icon que aparece no quadrado ao lado do texto--><!--adiciona espaço e redefine o tamanho do icon-->
+                  <span>Informação</span><!--retâgulo "informação"-->
+                </a>
+              </li>
+              <li class="tm-page-nav-item"><!--adiciona uma margem superior de 20 pixeis-->
+                <a href="#contacto" class="tm-page-link"><!--configura a aparência do retângulo-->
+                  <i class="fas fa-comments tm-page-link-icon"></i><!--icon que aparece no quadrado ao lado do texto--><!--adiciona espaço e redefine o tamanho do icon-->
+                  <span>Contacto</span><!--retângulo "contacto"-->
+                </a>
+              </li><!--lista-->
+            </ul><!--"unorganized list" lista desorganizada-->
+          </nav>
+        </div>        
+      </div>
+      <div class="tm-right"><!--define a largura do menu do lado direito-->
+        <main class="tm-main"><!--define uma largura máxima para a área do conteúdo principal-->
+          <div id="inicio" class="tm-page-content"><!--define uma animação-->
+            
+            <!-------------------Secções que se encontram do lado direito-------------------->
+            <nav class="tm-black-bg tm-drinks-nav"><!--cria um fundo semitransparente--><!--define uma altura fixa de 80 pixeis-->
+              <ul>
+                <li><!--palavras que se encontram na parte de cima do texto-->
+                  <a href="#" class="tm-tab-link active" data-id="cold">O que é?</a>
+                </li>
+                <li>
+                  <a href="#" class="tm-tab-link" data-id="hot">Como surgiu?</a>
+                </li>
+                <li>
+                  <a href="#" class="tm-tab-link" data-id="juice">Objetivos</a>
+                </li>
+              </ul>
+            </nav>
+              <!--------------------secção do "o que é"-------------------->
+            <div id="cold" class="tm-tab-content"><!--define uma animação-->
+              <div class="tm-list">
+                <div class="tm-list-item"><!--centraliza, distribui o espaço e adiciona uma margem superior entre os itens-->
+                  <img src="img/oqueé.png" alt="Dispositivo SENSORTEC" class="tm-list-item-img"><!--configura a aparência das imagens-->        
+                  <div class="tm-black-bg tm-list-item-text"><!--cria um fundo semitransparente--><!--adiciona espaço interior e torna-o flexível-->
+                    <h3 class="tm-list-item-name">O que é?</h3><!--facilita a organização, distribui os elementos pelo espaço disponível e remove a margem superior-->
+                    <p class="tm-list-item-description" style="text-align: justify;">A palavra "SENSORTEC" resulta da junção das palavras "sensor" e "tecnologia". 
+                      SENSORTEC é um dispositivo com sensores com o intuito de evitar que a criança se aproxime em demasia da televisão. Assim, se a criança se aproximar da televisão, 
+                      após 5 segundos, este dispositivo emite um som de alerta que continuará até que ela se afaste e os sensores a deixem de detetar.</p>
+                      <p class="tm-list-item-description" style="text-align: justify;">Com isto, pretendemos que os pais e/ou supervisores das crianças, 
+                        nos primeiros dias de experiência, possam dar a entender à criança que este sinal de alerta ocorrerá sempre que ela se aproximar da televisão. 
+                        Para a ajudar a entender o processo, estes poderão, por exemplo, colocar uma marca no chão que indique que, a partir dela até à televisão, o alerta será acionado.</p>
+                  </div>
+                </div>                     
+              </div>
+            </div> 
+              <!-----------------secção do "como surgiu"------------------->
+            <div id="hot" class="tm-tab-content"><!--define uma animação-->
+              <div class="tm-list">
+                <div class="tm-list-item"><!--centraliza, distribui o espaço e adiciona uma margem superior entre os itens-->      
+                  <img src="img/comosurgiu.jpg" alt="Criança muito perto da televisão" class="tm-list-item-img"><!--configura a aparência das imagens-->
+                  <div class="tm-black-bg tm-list-item-text"><!--cria um fundo semitransparente--><!--adiciona espaço interior e torna-o flexível-->
+                    <h3 class="tm-list-item-name">Como surgiu?</h3><!--facilita a organização, distribui os elementos pelo espaço disponível e remove a margem superior-->
+                    <p class="tm-list-item-description" style="text-align: justify;">A ideia deste projeto surgiu aquando da perceção de um episódio por nós presenciado, 
+                      em que uma criança de cinco anos estava constantemente a aproximar-se em demasia da televisão, pelo que a sua mãe desligava o aparelho, com o comando, 
+                      sempre que ela se aproximava, voltando a ligá-lo assim que a criança se voltava a afastar.
+                    </p>
+                    <p class="tm-list-item-description" style="text-align: justify;">Surgiu assim a nossa ideia de criar um dispositivo que desligasse a televisão e 
+                      emitisse um som que levasse a criança a afastar-se. Infelizmente, essa ideia inicial não foi realizada, pois, para retirar a imagem da televisão, 
+                      correríamos muitos riscos que não estávamos dispostos a correr. Por isso, simplificámos o projeto, e limitámo-nos à emissão do som quando a criança se aproxima.</p>             
+                  </div>
+                </div> 
+              </div>
+            </div>
+             <!-----------------secção "objetivos"-------------------------->
+            <div id="juice" class="tm-tab-content"><!--define uma animação-->
+              <div class="tm-list">
+                <div class="tm-list-item"><!--centraliza, distribui o espaço e adiciona uma margem superior entre os itens-->     
+                  <img src="img/objetivos.jpg" alt="Ilustração" class="tm-list-item-img"><!--configura a aparência das imagens-->
+                  <div class="tm-black-bg tm-list-item-text"><!--cria um fundo semitransparente--><!--adiciona espaço interior e torna-o flexível-->
+                    <h3 class="tm-list-item-name">Os nossos dois grandes objetivos são:</h3><!--facilita a organização, distribui os elementos pelo espaço disponível e remove a margem superior-->
+                    <p class="tm-list-item-description" style="text-align: justify;">- Criar um dispositivo que evite a aproximação da criança à televisão;</p>
+                    <p class="tm-list-item-description" style="text-align: justify;">- Fazer com que a criança, pela repetição do processo, entenda que a aproximação da televisão constitui uma proibição.</p>
+                  </div>
+                </div>              
+              </div>
+            </div>
+            <!-------fim das secções que se encontram do lado direito-------->
+          </div>
+
+          <!----------------------Página "sobre nós"---------------------->
+          <div id="sobre" class="tm-page-content"><!--define uma animação-->
+            <div class="tm-black-bg tm-mb-20 tm-about-box-1"><!--cria um fundo semitransparente--><!--define uma margem inferior de 20 pixeis--><!--adiciona espaço em volta-->
+              <h2 class="tm-text-primary tm-about-header">Sobre Nós</h2><!--define a cor do título--><!--adiciona uma margem à esquerda-->
+              <div class="tm-list-item tm-list-item-2"><!--centraliza, distribui o espaço e adiciona uma margem superior entre os itens--><!--alinha os elementos na parte de cima-->
+                <img src="img/sobre.jpg" alt="Ilustração" class="tm-list-item-img tm-list-item-img-big"><!--configura a aparência das imagens--><!--fornece margem e aumenta a largura e altura da imagem-->
+                <div class="tm-list-item-text-2"><!--faz com que o texto a ocupe o espaço disponível-->
+                  <p style="text-align: justify;">Somos dois alunos que se encontram a terminar o ensino secundário e que, como ideia para a PAP (Prova de Aptidão Profissional), decidiram basear-se numa experiência vivenciada (referida em "Como surgiu").</p>
+                </div>                
+              </div>
+            </div>
+            <div class="tm-black-bg tm-mb-20 tm-about-box-2"><!--cria um fundo semitransparente--><!--define uma margem inferior de 20 pixeis--><!--adiciona espaço em volta-->
+              <div class="tm-list-item tm-list-item-2"><!--centraliza, distribui o espaço e adiciona uma margem superior entre os itens--><!--alinha os elementos na parte de cima-->
+                <div class="tm-list-item-text-2"><!--faz com que o texto a ocupe o espaço disponível-->
+                  <h2 class="tm-text-primary";">Como isto começou</h2><!--define a cor do título-->
+                  <p style="text-align: justify;">Os Cursos Profissionais do Ensino Secundário terminam com uma prova final, a PAP (Prova de Aptidão Profissional), que consiste no desenvolvimento de 
+                    um projeto e da respetiva apresentação e defesa perante um júri.</p>
+                </div>                
+                <img src="img/comoistocomecou.png" alt="Image" class="tm-list-item-img tm-list-item-img-big tm-img-right"><!--configura a aparência das imagens--><!--fornece margem e aumenta a largura e altura da imagem--><!--adiciona uma margem esquerda e remove a margem direita-->
+              </div>
+              <p style="text-align: justify;">Por isso, surgiu esta ideia que considerámos pertinente e cativante, 
+                visto que entendemos que poderá suprir uma necessidade de mercado. Assim, através de um questionário que aplicámos, viemos a confirmar a pertinência da ideia inicial, 
+                embora, infelizmente, quando iniciámos o projeto propriamente dito, tenhamos tido a perceção que não iríamos conseguir realizá-lo na totalidade, pois era muito mais complexo do que tínhamos imaginado.</p>
+                <p style="text-align: justify;">Mesmo não conseguindo realizar uma parte do nosso projeto, avançámos e terminámo-lo.</p>
+              </p>                  
+              </p>
+            </div>
+          </div>
+          <!----------------fim da página "sobre nós"---------------------->
+
+          <!--------------------Página "Informação"------------------------>
+          <div id="especial" class="tm-page-content"><!--define uma animação-->
+            <div class="tm-special-items"><!--permite que os itens se dividam por várias linhas se necessário e aplica margens-->
+              <div class="tm-black-bg tm-special-item"><!--cria um fundo semitransparente--><!--define a largura máxima e margens-->
+                <img src="img/informação.jpg" alt="Imagem"><!--imagem-->
+                <div class="tm-special-item-description"><!--adiciona espaço à volta do texto-->
+                  <h2 class="tm-text-primary tm-special-item-title" style="text-align: center;">Informação</h2><!--define a cor do título--><!--define o tamanho da fonte-->
+                  <p class="tm-special-item-text" style="text-align: justify;">Informamos que o nosso projeto ainda não se encontra no mercado.</p><!--pequena informação-->
+                </div>
+              </div>      
+            </div>            
+          </div>
+          <!------------------Fim da página "Informação"----------------->
+
+          <!--------------------Página "Contacto"---------------------------->
+          <div id="contacto" class="tm-page-content"><!--define uma animação-->
+            <div class="tm-black-bg tm-contact-text-container"><!--cria um fundo semitransparente--><!--adiciona espaço interno e uma margem-->
+              <h2 class="tm-text-primary">Contacto</h2><!--define a cor do título-->
+              <p>Portugal</p>
+              <p>Email: sensortecofficial@gmail.com</p>
+              <p>Redes sociais:</p>
+              <nav class="tm-site-logo"><!--cria uma margem direita da 30 pixeis-->
+                <ul>
+                  <li>
+                    <a href="https://www.instagram.com/_sensortec_/" target="_blank"><!--indica o site para onde vai quando carrega no icon do instagram-->
+                      <img src="img/instagram.png" alt="instagram"><!--o icon do instagram é uma imagem que está guardada na pasta imagens e que serve como icon-->
+                    </a>
+                    <a href="https://www.tiktok.com/@_sensortec_" target="_blank"><!--indica o site para onde vai quando carrega no icon do tiktok-->
+                      <img src="img/tiktok.png" alt="tiktok"><!--o icon do tiktok é uma imagem que está guardada na pasta imagens e que serve como icon-->
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-------------------Fim da página "Contacto"---------------------->
+        </main>
+      </div>    
+    </div>
+  </div>
+  
+
+  <script src="js/jquery-3.4.1.min.js"></script>    
+  <script>
+
+    function setVideoSize() {
+      const vidWidth = 1920; /*define a largura do fundo*/
+      const vidHeight = 1080; /*define a altura do fundo*/
+      const windowWidth = window.innerWidth;/*obtém a largura da janela do navegador e armazena as informações em constantes*/
+      const windowHeight = window.innerHeight;/*obtém a altura da janela do navegador e armazena as informações em constantes*/
+      const tempVidWidth = windowHeight * vidWidth / vidHeight;/*calcula a largura temporária mantendo a proporção original*/
+      const tempVidHeight = windowWidth * vidHeight / vidWidth;/*calcula a altura temporária mantendo a proporção original*/
+      const newVidWidth = tempVidWidth > windowWidth ? tempVidWidth : windowWidth;/*define a largura final*/
+      const newVidHeight = tempVidHeight > windowHeight ? tempVidHeight : windowHeight;/*define a altura final*/
+      const tmVideo = $('#tm-video');
+
+      tmVideo.css('width', newVidWidth);
+      tmVideo.css('height', newVidHeight);
+    }
+
+    function openTab(evt, id) {/*função que permite que o site seja "one-page", ou seja, que todas as secções aparecem sempre na mesma janela*/
+      $('.tm-tab-content').hide();/*oculta as restantes páginas de cada secção*/
+      $('#' + id).show();/*exibe a página correspondente á opção selecionada*/
+      $('.tm-tab-link').removeClass('active');/*remove os efeitos */
+      $(evt.currentTarget).addClass('active');/*altera a aparência da opção selecionada indicando que está ativa*/
+    }    
+
+    function initPage() {
+      let pageId = location.hash;
+
+      if(pageId) {
+        highlightMenu($(`.tm-page-link[href^="${pageId}"]`)); 
+        showPage($(pageId));
+      }
+      else {
+        pageId = $('.tm-page-link.active').attr('href');
+        showPage($(pageId));
+      }
+    }
+
+    function highlightMenu(menuItem) {
+      $('.tm-page-link').removeClass('active');
+      menuItem.addClass('active');
+    }
+
+    function showPage(page) {
+      $('.tm-page-content').hide();
+      page.show();
+    }
+
+    $(document).ready(function(){
+
+      /***************** Pages *****************/
+
+      initPage();
+
+      $('.tm-page-link').click(function(event) {
+        
+        if(window.innerWidth > 991) {
+          event.preventDefault();
+        }
+
+        highlightMenu($(event.currentTarget));
+        showPage($(event.currentTarget.hash));
+      });
+
+      
+      /***************** Tabs *******************/
+
+      $('.tm-tab-link').on('click', e => {
+        e.preventDefault(); 
+        openTab(e, $(e.target).data('id'));
+      });
+
+      $('.tm-tab-link.active').click(); // Open default tab
+
+
+      /************** Video background *********/
+
+      setVideoSize();
+
+      // Set video background size based on window size
+      let timeout;
+      window.onresize = function(){
+        clearTimeout(timeout);
+        timeout = setTimeout(setVideoSize, 100);
+      };
+      });
+      
+  </script>
+</body>
+</html>

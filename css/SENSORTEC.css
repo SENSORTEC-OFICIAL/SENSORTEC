@@ -1,0 +1,317 @@
+html { scroll-behavior: smooth; } /*transição suave quando o utilizador faz "scrool" pela página*/
+
+body {/*configura estilos para o corpo da página*/
+    margin: 0; /*remove qualquer margem padrão aplicada ao elemento*/
+    padding: 0; /*remove o padding padrão*/
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif; /*tipos de letra*/
+    font-size: 18px; /*tamanho padrão para o texto*/
+    overflow-x: hidden;/*oculta qualquer conteúdo da página que ultrapasse a largura da janela do navegador na horizontal*/
+    background-image: url("../img/fundo.jpg");/*imagem de fundo do site*/
+    width:100vw;/*adapta a largura do fundo á largura do ecrã do dispositivo*/
+    height: 100%;/*a altura do funco ocupa 100% do ecrã do dispositivo*/
+}
+
+ul { /*cria uma aparência mais compacta para as listas não ordenadas*/
+    padding: 0;/*remove qualuqer espeço interno padrão que o navegador possa acrescentar às listas não ordenadas*/
+    margin: 0; /*remove qualquer margem padrão aplicada ao elemento*/
+}
+
+nav > ul > li { list-style: none; } /*remove os marcadores de lista padrão (bolinhas, números) dos itens*/
+
+a { /*define estilos para todos os links do site*/
+	color: rgb(79, 82, 83); /*define a cor do texto dos links*/
+    text-decoration: none; /*remove o sublinhado padrão dos links*/
+    transition: all 0.3s ease; /*aplica uma transição suave ao link sempre que o utilizador
+    passar o rato por cima ou interagir com ele*/
+}
+
+p { /*para todos os elementos parágrafos*/
+    line-height: 1.8;/*define a altura da linha para os parágrafos como 1.8 o tamanho da fonte do texto*/
+    margin-top: 0;/*remove a margem superior padrão que possa ser aplicada aos parágrafos*/
+}
+
+h2 { margin-top: 0; }/*remove a margem superior padrão dos títulos h2*/
+
+#tm-video {/*id para o video de fundo*/
+    position: fixed;/*fixa o video mesmo quando o utilizador estiver a rolar a página*/
+    right: 0;/*coloca o elemento rente à margem direita da janela do navegador*/
+    bottom: 0;/*posiciona o elemento na parte inferior da janela do navegador*/
+    z-index: -1000;/*coloca o video como fundo da página*/
+}
+
+.tm-video-wrapper { position: relative; }/*todos os elementos HTML serão posicionados de acordo com a estrutura do HTML*/
+
+.tm-container { padding: 30px; }/*utilizado no site todo*//*adiciona um espaçamento interno de 30 pixeis*/
+
+.tm-row {/*utilizado no site todo*/
+    display: flex;/*permite posicionar elementos de forma flexível*/
+    justify-content: space-between;/*distribui os elementos de forma a que os primeiros fiquem
+    próximo à margem inicial do container e o último á margem final*/
+}
+
+.tm-left,/*utilizado no menu do lado esquerdo*/
+.tm-right {/*utilizado no menu do lado direito*/
+    width: 50%;/*divide a página em duas colunas*//*define a largura do container como 50%, criando duas colunas de tamanhos iguais*/
+}
+
+/*utilizado no menu do lado esquerdo*/
+.tm-left-inner { position: fixed; }/*os elementos da coluna da esquerda permanecem fixos mesmo quando o utilizador navega para baixo*/
+
+/*retângulo do logótipo*/
+.tm-site-header {
+    background-color: rgb(255, 255, 255); /*define cor de fundo do retângulo*/
+    color: rgb(172, 177, 177); /*define a cor do texto*/
+    width: 100%;/*garante que o retângulo ocupa 100% da largura do container*/
+    height: 160px;/*define a altura do retângulo com 160 pixeis*/
+    display: flex;/*permite  posicionar os elementos de forma organizada*/
+    align-items: center;/*alinha os elementos ao centro na vertical*/
+    justify-content: center;/*alinha os elementos ao centro na horizontal*/   
+}
+/*utilizado no retângulo do logótipo e na página "contacto"*/
+.tm-site-logo { margin-right: 30px; }/*cria uma margem direita de 30 pixeis*/
+
+.tm-left-inner {/*utilizado no menu do lado esquerdo*/
+    max-width: 500px; /*define a largura máxima para 500 pixeis*/
+    width: 100%; /*os elementos irão ocupar 100% do espaço disponível*/
+}
+
+.tm-site-nav-ul {/*utilizado nos retângulos do menu do lado esquerdo*/
+    display: flex;/*permite  posicionar os elementos de forma organizada*/
+    flex-wrap: wrap;/*permite que os itens passem para a linha seguinte caso não consigam ficar todos na mesma linha*/
+    justify-content: space-between;/*distribui os elementos de forma a que os primeiros fiquem
+    próximo à margem inicial do container e o último á margem final, na horizontal*/
+}
+/*utilizado individualmente por cada retângulo do menu do lado esquerdo*/
+.tm-page-nav-item { margin-top: 20px; }/*adiciona uma margem superior de 20 pixeis em cada elemento*/
+
+/*retângulos do menu do lado esquerdo*/
+.tm-page-link {
+    min-width: 240px; /*define uma largura mínima de 240 píxeis*/
+    height: 100px; /*define uma altura fixa de 100 píxeis*/
+    background-color: rgb(255, 255, 255);/*define a cor de fundo do retângulo*/
+    color: rgb(103, 107, 107);/*define a cor do texto*/
+    display: flex;/*permite  posicionar os elementos de forma organizada*/
+    text-decoration: none;/*remove o sublinhado padrão dos links*/
+    align-items: center;/*alinha os elementos ao centro na vertical*/  
+    font-size: 1.2rem;/*define o tamanho do texto para 1.2 vezes maior do que o tamanho do elemento raíz*/
+}
+/*muda a cor dos botões do menu do lado esquerdo quando selecionados ou quando passam com o rato por cima*/
+.tm-page-link:hover,/*define a mudança de cor quando o utilizador passa o rato por cima das opções do menu*/
+.tm-page-link.active {/*a opção selecionada, direciona, o utilizador, para as respetivas informações dentro da página*/
+    background-color: rgb(64, 66, 66);/*define a cor da opção selecionada*/
+    color: white;/*define a cor das restantes opções não selecionadas*/
+}
+/*utilizado, individualmente, pelos retângulos do menu do lado esquerdo*/
+.tm-page-link-icon {/*utilizado nos ícons do menu do lado esquerdo*/
+    margin-right: 25px; /*define a margem direita de 25 píxeis*/
+    margin-left: 25px; /*define a margem esquerda de 25 píxeis*/
+    font-size: 1.5rem; /*define o tamanho do ícone para 1.5 vezes maior do que o tamanho original*/
+}
+/*utilizado no site*/
+.tm-black-bg {/*cria um fundo semi-transparente utilizado para os textos*/
+    background-color: rgba(0,0,0,0.6);/*define a cor preto com 60% de opacidade para o fundo*/
+    color: white;/*define a cor do texto*/
+}
+
+.tm-drinks-nav > ul > li { display: inline-block; }
+
+.tm-drinks-nav > ul > li > a {/*utilizado no menu do lado direito*/
+    color: white;/*define a cor do texto*/
+    font-size: 1.2rem; /*define o tamanho do texto para 1.2 vezes maior do que o tamanho original*/
+    padding-top: 15px;/*cria uma margem de 15 pixeis na parte superior do texto*/
+    padding-bottom: 5px;/*cria uma margem de 5 pixeis na parte inferior do texto*/
+    border-bottom: 3px solid transparent;/*define uma margem inferior com 3 pixeis de largura e transparente*/
+}
+/*utilizado no menu do lado direito*/
+.tm-drinks-nav { height: 80px; }/*define uma altura fixa de 80 pixeis para o elemento*/
+/*utilizado no menu do lado direito*/
+.tm-main { max-width: 660px; }/*define uma largura máxima de 660 pixeis para a área de conteúdo principal*/
+
+.tm-drinks-nav > ul {/*direciona especificamente*/
+    display: flex;/*permite  posicionar os elementos de forma organizada*/
+    align-items: center;/*alinha verticalmente ao centro os elementos*/
+    justify-content: space-around;/*distribui um espaço por igual ao redor de todos os elementos*/
+    height: 100%;/*garante que os elementos ocupam 100% da altura do container*/
+}
+/*quando é selecionada uma secção, que se encontra no menu do lado direito*/
+.tm-drinks-nav > ul > li a.active,
+.tm-drinks-nav > ul > li a:hover {
+    color: #96FEFF;/*define a cor do texto quando se passa o rato por cima ou seleciona a opção*/
+    border-bottom: 4px solid #96FEFF;/*aparece uma linha por baixo do texto quando a opção é selecionada
+    ou passado o rato por cima, com 4 pixeis de largura e de cor azul*/
+}
+/*utilizado, individualmente, nas secções do lado direito*/
+.tm-list-item {
+    display: flex;/*permite  posicionar os elementos de forma organizada*/
+    align-items: center;/*alinha os elementos ao centro verticalmente*/
+    justify-content: space-between;/*distribui os elementos com espaço e o primeiro e último elementos são colocados juntos às margens*/
+    margin-top: 20px;/*adiciona uma margem de 20 pixeis na parte superior do elemento*/
+}
+/*utilizado na página "sobre nós"*/
+.tm-list-item-2 { align-items: flex-start; }/*alinha os elementos na parte de cima do container*/
+/*utilizado, individualmente, nas secções do lado direito*/
+.tm-list-item-img {/*utilizado nas imagens do menu do lado direito*/
+    margin-right: 20px;/*adiciona uma margem de 20 pixeis ao lado direito do elemento*/
+    width: 160px;/*define a largura da imagem para 160 pixeis*/
+    height: 160px;/*define a altura da imagem para 160 pixeis*/
+    background-color: rgb(64, 66, 66);/*define a cor de fundo caso a imagem não seja carregada*/
+}
+/*utilizado na página "sobre nós"*/
+.tm-list-item-img-big {/*utilizado na página "sobre nós", nas imagens*/
+    margin-right: 25px;/*adiciona uma margem de 25 pixeis ao lado direito da imagem*/
+    width: 200px;/*define uma largura da imagem para 200 pixeis*/
+    height: 200px;/*define a altura da imagem para 200 pixeis*/
+}
+/*utilizado, individualmente, nas secções do lado direito*/
+.tm-list-item-text {
+    padding: 20px 25px;/*define 20 pixeis de espaço da parte superior e inferior e 25 pixeis de espaço nos lados esquerdo e direito*/
+    flex: 1;/*faz com que o elemento seja flexível e que se adapte para preencher o espaço disponível no container*/
+}
+
+.tm-list-item-text-2 { flex: 1; }/*utilizado na página "sobre nós", no texto e título*//*faz com que o texto seja flexível e que se 
+adapte para preencher o espaço disponível no container*/
+
+/*utilizado, individualmente, nas secções do lado direito*/
+.tm-list-item-name {
+    display: flex;/*permite  posicionar os elementos de forma organizada*/
+    justify-content: space-between;/*distribui os elementos com espaço e o primeiro e último elementos são colocados juntos às margens*/
+    margin-top: 0;/*remve qualquer margem padrão da parte superior do elemento*/
+}
+
+.tm-site-footer { margin-top: 15px; }/*define uma margem superior de 15 pixeis para o elemento*/
+
+.tm-footer-text {
+    padding: 10px 65px 10px 20px;/*define espaço de 10 pixeis na parte superior e inferior, 65 pixeis para o lado direito e 20 pixeis para o lado esquerdo*/
+    display: inline-block;/*permite que o elemento se deixe rodear pelo texto e também definir dimensões*/
+}
+
+.tm-footer-link { color: white; }/*define a cor dos links*/
+/*utilizado no site*/
+.tm-tab-content { animation: fadeEffect 1s; }/*define uma animação ao elemento com duração de 1s*/
+/*utilizado no menu do lado direito*/
+.tm-page-content { animation: fadeEffect 1s; }/*define uma animação ao elemento com duração de 1s*/
+
+/*utilizado nas páginas do menu do lado esquerdo*/
+.tm-text-primary { color: #3CC; }/*define a cor dos títulos das páginas do menu do lado esquerdo*/
+/*utilizado na página "sobre nós"*/
+.tm-mb-20 { margin-bottom: 20px; }/*utilizado no texto da página "sobre nós"*//*define uma margem inferior de 20 pixeis*/
+/*utilizado na página "contacto"*/
+.tm-mb-30 { margin-bottom: 30px; }/*define uma margem inferior de 30 pixeis*/
+/*utilizado na página "sobre nós"*/
+.tm-img-right {
+    margin-left: 30px;/*define a margem esquerda do elemento com 30 pixeis*/
+    margin-right: 0;/*remove a margem direita*/
+}
+
+@keyframes fadeEffect {/*cria um efeito "fade in"*/
+    from { opacity: 0.3; }/*define o estado inicial da animação, semi-transparente*/
+    to { opacity: 1; }/*define o estado final da animação, tonardo-se totalmente opaca*/
+}
+
+/*Página "Sobre nós"*/
+.tm-about-box-1 { padding: 40px 30px 50px; }/*primeiro container, lado direito*//*define de espaço: 40 pixeis da parte superior, 30 pixeis à direita e 30 pixeis na parte inferior*/
+.tm-about-box-2 { padding: 50px 40px 30px; }/*segundo container*//*define de espaço: 50 pixeis na parte superior, 40 pixeis à direita e 30 pixeis na parte inferior*/
+.tm-about-header { margin-left: 220px; }/*utilizado no título da página "sobre nós"*//*adiciona uma margem esquerda de 220 pixeis*/
+
+/*Página "Informação"*/
+.tm-special-items {
+    display: flex;/*permite  posicionar os elementos de forma organizada*/
+    flex-wrap: wrap;/*divide por várias linhas o texto se necessário*/
+    margin: -30px -10px 0;/*adiciona uma margem negativa de: 30 pixeis na parte inferior e 
+    10 pixeis do lado direito e esquerdo e remove a margem superior*/
+}
+/*Página "Informação"*/
+.tm-special-item {
+    max-width: 320px;/*define a largura máxima do elemento 320 pixeis*/
+    margin: 30px 10px;/*define as margens superior e inferior como 30 pixeis e as margens direita e esquerda como 10 pixeis*/
+}
+/*utilizado na página "informação"*/
+.tm-special-item-title { font-size: 1.4rem; }/*define o título 1,4 vezes maior que o tamanho original*/
+/*utilizado na página "informação"*/
+.tm-special-item-description { padding: 25px 30px; }/*define de espaço: 25 pixeis na parte superior e inferior e 30 pixeis na esquerda e direita*/
+
+/*"Página "Contacto"*/
+.tm-contact-text-container {
+    padding: 45px 50px;/*define de espaço: 45 pixeis na parte superior e inferior e 50 pixeis na direita e esquerda*/
+    margin-bottom: 20px;/*define uma margem inferior de 20 pixeis*/
+}
+
+/*utilizado na página "contacto"*/
+.tm-btn-primary {
+    color: rgb(64, 66, 66);/*define a cor do texto dentro do botão*/
+    background-color: white;/*define a cor de fundo do botão*/
+    border: 0;/*remove a margem padrão do botão*/
+    padding: 12px 40px;/*define de espaço: 12 pixeis na parte superior e inferior e 40 pixeis na direita e esquerda*/
+    font-size: 1.4rem; /*define o tamanho do texto para 1.4 vezes maior do que o tamanho do elemento raíz*/
+    cursor: pointer;/*define o cursor do rato para o estilo "pointer" sobre o botão o que indica interatividade*/
+    transition: all 0.3s ease;/*define uma transição suave com duração de 0,3s*/
+}
+
+/*serve para adaptar a página e os seus elementos ao ecrã em que está a ser visualizada*/
+@media (max-width: 1130px) and (min-width: 992px) {/*define a largura da tela: máxima de 1130 pixeis e mínima de 992 pixeis*/
+    .tm-left-inner { max-width: 380px; }/*define a largura máxima de 380 pixeis*/
+    .tm-site-name { font-size: 2.6rem; }/*define o tamanho do texto para 2.6 vezes maior do que o tamanho original*/
+    .tm-site-logo { margin-right: 20px; }/*define uma margem direita de 20 pixeis*/
+    .tm-page-link { width: 100%; }/*define a largura dos elementos como 100%*/
+    .tm-page-link-icon { margin-right: 15px; }/*define a margem direita como 15 pixeis*/
+    .tm-left { width: 45%; }/*define a largura do menu do lado esquerdo como 45%*/
+    .tm-right { width: 55%; }/*define a largura dos elementos como 55%*/
+}
+/*serve para adaptar a página e os seus elementos ao ecrã em que está a ser visualizada*/
+@media (max-width: 991px) {/*define a largura máxima de 991 pixeis*/
+    .tm-left-inner { position: static; }/*redefine o código "position" para "static" para ecrãs mais pequenos*/
+    .tm-left, .tm-right { width: 100%; }/*define a largura dos elementos como 100% para ecrãs pequenos o que torna as secções esquerda e direita numa única coluna*/
+    .tm-left { margin-bottom: 50px; }/*define a margem inferior do menu do lado esquerdo como 50 pixeis*/
+    .tm-row { display: block; }/*define o código "display" para "block" para ecrãs menores pois "flex" ou "inline-flex" são para ecrãs maiores*/
+}
+/*serve para adaptar a página e os seus elementos ao ecrã em que está a ser visualizada*/
+@media (max-width: 574px) {/*define a largura máxima como 574 pixeis*/
+    .tm-site-nav-ul { display: block; }/*define o código "display" para "block" para ecrãs menores pois "flex" ou "inline-flex" são para ecrãs maiores*/
+}
+/*serve para adaptar a página e os seus elementos ao ecrã em que está a ser visualizada*/
+@media (max-width: 550px) and (min-width: 501px) {/*define a largura do ecrã: máxima de 550 pixeis e mínima de 501 pixeis*/
+    .tm-list-item-img-big {/*define a altura e largura das imagens*/
+        width: 160px;/*define a largura como 160 pixeis*/
+        height: 160px;/*define a altura como 160 pixeis*/
+    }
+
+    .tm-about-header { margin-left: 180px; }/*define a margem esquerda dos elementos como 180 pixeis*/
+}
+/*serve para adaptar a página e os seus elementos ao ecrã em que está a ser visualizada*/
+@media (max-width: 500px) {/*define a largura máxima como 500 pixeis*/
+    .tm-about-header { margin-left: 0; }/*remove a margem esquerda*/
+    .tm-list-item-2 { flex-direction: column; }/*coloca o layout na vertical*/
+    .tm-about-box-1 { padding-left: 30px; }/*utilizado na secção "sobre nós"*//*adiciona 30 pixeis de espaço à margem esquerda*/
+
+    .tm-list-item-img-big {
+        margin-right: 0;/*remove a margem direita*/
+        margin-bottom: 25px;/*define a margem inferior como 25 pixeis*/
+    }
+
+    .tm-img-right { margin-left: 0; }/*remove a margem esquerda*/
+}
+/*serve para adaptar a página e os seus elementos ao ecrã em que está a ser visualizada*/
+@media (max-width: 479px) {/*define a largura máxima como 479 pixeis*/
+    .tm-site-name { font-size: 2.6rem; } /*define o tamanho do texto para 2.6 vezes maior do que o tamanho do elemento raíz*/
+    .tm-site-logo { margin-right: 20px; } /*tamanho da margem da direita (20 pixeis) para o logo que está no retângulo grande*/
+
+    .tm-list-item {
+        flex-direction: column;/*coloca na vertical*/
+        margin-top: 40px;/*define uma margem superior como 40 pixeis*/
+    }
+
+    .tm-list-item-img {
+        margin-right: 0;/*remove a margem direita*/
+        margin-bottom: 15px;/*define a margem inferior como 15 pixeis*/    
+    }
+
+    .tm-drinks-nav { height: auto; }/*adpata a altura ao conteúdo*/
+
+    .tm-drinks-nav > ul {
+        flex-direction: column;/*coloca na vertical*/
+        padding: 15px;/*define o espaçamento interno como 15 pixeis*/
+    }
+
+    .tm-drinks-nav > ul > li { margin-bottom: 10px; }/*define a margem inferior como 10 pixeis*/
+    .tm-drinks-nav > ul > li > a { display: block; }/*faz com que os elementos ocupem a largura total disponível e que se empilhem verticalmente*/
+}
